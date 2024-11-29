@@ -10,6 +10,20 @@ export const getAllUsuarios = async (req, res) => {
   }
 };
 
+// Obtener un usuario por ID
+export const getUsuarioById = async (req, res) => {
+  const { id } = req.params;  // Obtener el ID de la URL
+  try {
+    const [rows] = await conmysql.query('SELECT * FROM usuarios WHERE id = ?', [id]);
+    if (rows.length === 0) {
+      return res.status(404).json({ message: 'Usuario no encontrado' });
+    }
+    res.json(rows[0]);
+  } catch (error) {
+    res.status(500).json({ message: 'Error al obtener el usuario', error });
+  }
+};
+
 // Crear un nuevo usuario (registro)
 export const createUsuario = async (req, res) => {
   const { usr_nombre, usr_correo, usr_usuario, usr_clave } = req.body;

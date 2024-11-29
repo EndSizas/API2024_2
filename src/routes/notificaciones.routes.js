@@ -1,7 +1,15 @@
-import express from 'express';
-import { getNotificaciones } from '../controladores/notificaciones.Ctrl.js';
-const router = express.Router();
+import { Router } from 'express';
+import { getAllNotificaciones, getNotificacionById, createNotificacion } from '../controladores/notificaciones.Ctrl.js';
 
-router.get('/', getNotificaciones);
+const router = Router();
+
+// Obtener todas las notificaciones
+router.get('/', getAllNotificaciones);
+
+// Obtener una notificación por ID
+router.get('/:id', getNotificacionById);
+
+// Crear una nueva notificación
+router.post('/', createNotificacion);
 
 export default router;

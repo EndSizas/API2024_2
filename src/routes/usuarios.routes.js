@@ -1,14 +1,18 @@
-import express from 'express';
-import { getAllUsuarios, createUsuario, loginUsuario } from '../controladores/usuarios.Ctrl.js';
-const router = express.Router();
+import { Router } from 'express';
+import { getAllUsuarios, getUsuarioById, createUsuario, loginUsuario } from '../controladores/usuarios.Ctrl.js';
+
+const router = Router();
 
 // Obtener todos los usuarios
 router.get('/', getAllUsuarios);
 
-// Crear un nuevo usuario (registro)
-router.post('/register', createUsuario);
+// Obtener un usuario por ID
+router.get('/:id', getUsuarioById);
 
-// Iniciar sesión
+// Crear un nuevo usuario (registro)
+router.post('/', createUsuario);
+
+// Iniciar sesión (login)
 router.post('/login', loginUsuario);
 
 export default router;
