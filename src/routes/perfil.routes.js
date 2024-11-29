@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getAllPerfiles, getPerfilById, createOrUpdatePerfil } from '../controladores/perfil.Ctrl.js';
+import { getPerfiles, getPerfilById, createOrUpdatePerfil } from '../controladores/perfil.Ctrl.js';
 
 const router = Router();
 

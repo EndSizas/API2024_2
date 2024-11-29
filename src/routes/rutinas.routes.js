@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getAllRutinas, getRutinaById, createRutina } from '../controladores/rutinas.Ctrl.js';
+import { getRutinas, getRutinaById, createRutina } from '../controladores/rutinas.Ctrl.js';
 
 const router = Router();
 

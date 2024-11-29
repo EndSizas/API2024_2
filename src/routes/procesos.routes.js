@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getAllProcesos, getProcesoById, createProceso } from '../controladores/procesos.Ctrl.js';
+import { getProcesos, getProcesoById, createProceso } from '../controladores/procesos.Ctrl.js';
 
 const router = Router();
 

@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getAllNotificaciones, getNotificacionById, createNotificacion } from '../controladores/notificaciones.Ctrl.js';
+import { getNotificaciones, getNotificacionById, createNotificacion } from '../controladores/notificaciones.Ctrl.js';
 
 const router = Router();
 

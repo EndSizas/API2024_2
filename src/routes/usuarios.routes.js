@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getAllUsuarios, getUsuarioById, createUsuario, loginUsuario } from '../controladores/usuarios.Ctrl.js';
+import { getUsuarios, getUsuarioById, createUsuario, loginUsuario } from '../controladores/usuarios.Ctrl.js';
 
 const router = Router();
 

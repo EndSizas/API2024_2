@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getAllMotivaciones, getMotivacionById, createMotivacion } from '../controladores/motivaciones.Ctrl.js';
+import { getMotivaciones, getMotivacionById, createMotivacion } from '../controladores/motivaciones.Ctrl.js';
 
 const router = Router();
 

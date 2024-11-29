@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getAllEjercicios, getEjercicioById, createEjercicio } from '../controladores/ejercicios.Ctrl.js';
+import { getEjercicios, getEjercicioById, createEjercicio } from '../controladores/ejercicios.Ctrl.js';
 
 const router = Router();
 
