@@ -4,7 +4,7 @@ import { getAllEjercicios, getEjercicioById, createEjercicio } from '../controla
 const router = Router();
 
 // Obtener todos los ejercicios
-router.get('/', getAllEjercicios);
+router.get('/', getEjercicios);
 
 // Obtener un ejercicio por ID
 router.get('/:id', getEjercicioById);

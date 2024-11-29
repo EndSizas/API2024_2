@@ -4,7 +4,7 @@ import { getAllNotificaciones, getNotificacionById, createNotificacion } from '.
 const router = Router();
 
 // Obtener todas las notificaciones
-router.get('/', getAllNotificaciones);
+router.get('/', getNotificaciones);
 
 // Obtener una notificación por ID
 router.get('/:id', getNotificacionById);

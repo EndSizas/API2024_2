@@ -4,10 +4,10 @@ import { getAllUsuarios, getUsuarioById, createUsuario, loginUsuario } from '../
 const router = Router();
 
 // Obtener todos los usuarios
-router.get('/', getAllUsuarios);
+router.get('/', getUsuarios);
 
 // Obtener un usuario por ID
-router.get('usuarios/:id', getUsuarioById);
+router.get('/:id', getUsuarioById);
 
 // Crear un nuevo usuario (registro)
 router.post('/', createUsuario);

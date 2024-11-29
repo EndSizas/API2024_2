@@ -1,7 +1,7 @@
 import { conmysql } from '../db.js';
 
 // Obtener todas las notificaciones (Método GET)
-export const getAllNotificaciones = async (req, res) => {
+export const getNotificaciones = async (req, res) => {
   try {
     const [notificaciones] = await conmysql.query('SELECT * FROM notificaciones');
     res.json(notificaciones);

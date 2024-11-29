@@ -1,7 +1,7 @@
 import { conmysql } from '../db.js';
 
 // Obtener todos los ejercicios (Método GET)
-export const getAllEjercicios = async (req, res) => {
+export const getEjercicios = async (req, res) => {
   try {
     const [ejercicios] = await conmysql.query('SELECT * FROM ejercicios');
     res.json(ejercicios);

@@ -1,7 +1,7 @@
 import { conmysql } from '../db.js';
 
 // Obtener todas las motivaciones (Método GET)
-export const getAllMotivaciones = async (req, res) => {
+export const getMotivaciones = async (req, res) => {
   try {
     const [motivaciones] = await conmysql.query('SELECT * FROM motivaciones');
     res.json(motivaciones);

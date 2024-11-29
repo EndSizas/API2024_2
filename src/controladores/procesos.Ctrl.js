@@ -1,7 +1,7 @@
 import { conmysql } from '../db.js';
 
 // Obtener todos los procesos
-export const getAllProcesos = async (req, res) => {
+export const getProcesos = async (req, res) => {
   try {
     const [procesos] = await conmysql.query('SELECT * FROM procesos');
     res.json(procesos);

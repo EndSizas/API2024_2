@@ -4,7 +4,7 @@ import { getAllProcesos, getProcesoById, createProceso } from '../controladores/
 const router = Router();
 
 // Obtener todos los procesos
-router.get('/', getAllProcesos);
+router.get('/', getProcesos);
 
 // Obtener un proceso por ID
 router.get('/:id', getProcesoById);

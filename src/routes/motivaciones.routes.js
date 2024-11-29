@@ -4,7 +4,7 @@ import { getAllMotivaciones, getMotivacionById, createMotivacion } from '../cont
 const router = Router();
 
 // Obtener todas las motivaciones
-router.get('/', getAllMotivaciones);
+router.get('/', getMotivaciones);
 
 // Obtener una motivación por ID
 router.get('/:id', getMotivacionById);

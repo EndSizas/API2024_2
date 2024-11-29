@@ -4,7 +4,7 @@ import { getAllPerfiles, getPerfilById, createOrUpdatePerfil } from '../controla
 const router = Router();
 
 // Obtener todos los perfiles
-router.get('/', getAllPerfiles);
+router.get('/', getPerfiles);
 
 // Obtener un perfil de un usuario por ID
 router.get('/:usuario_id', getPerfilById);

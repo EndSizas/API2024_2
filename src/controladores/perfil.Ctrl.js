@@ -1,7 +1,7 @@
 import { conmysql } from '../db.js';
 
 // Obtener todos los perfiles (Método GET)
-export const getAllPerfiles = async (req, res) => {
+export const getPerfiles = async (req, res) => {
   try {
     const [perfiles] = await conmysql.query('SELECT * FROM perfil');
     res.json(perfiles);

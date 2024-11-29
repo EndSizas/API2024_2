@@ -1,7 +1,7 @@
 import { conmysql } from '../db.js';
 
 // Obtener todos los usuarios
-export const getAllUsuarios = async (req, res) => {
+export const getUsuarios = async (req, res) => {
   try {
     const [rows] = await conmysql.query('SELECT * FROM usuarios');
     res.json(rows);

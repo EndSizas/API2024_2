@@ -4,7 +4,7 @@ import { getAllRutinas, getRutinaById, createRutina } from '../controladores/rut
 const router = Router();
 
 // Obtener todas las rutinas
-router.get('/', getAllRutinas);
+router.get('/', getRutinas);
 
 // Obtener una rutina por ID
 router.get('/:id', getRutinaById);
