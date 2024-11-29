@@ -8,7 +8,7 @@ import bodyParser from 'body-parser';
 import comunidadRoutes from './routes/comunidad.routes.js';
 import motivacionesRoutes from './routes/motivaciones.routes.js';
 import notificacionesRoutes from './routes/notificaciones.routes.js';
-import rachaRoutes from './routes/racha.routes.js';
+import rachasRoutes from './routes/rachas.routes.js';
 import recompensasRoutes from './routes/recompensas.routes.js';
 import procesosRoutes from './routes/procesos.routes.js';  // Ruta de procesos
 
@@ -23,18 +23,17 @@ app.use(cors());
 // }));
 
 app.use(bodyParser.json());
-app.use('/api', usuariosRoutes);
-app.use('/api', rutinasRoutes);
-app.use('/api', ejerciciosRoutes); // Agregado
-app.use('/api', perfilRoutes); // Cambié "logros" por "perfil"
-app.use('/api', comunidadRoutes);
-app.use('/api', motivacionesRoutes);
-app.use('/api', notificacionesRoutes);
-app.use('/api', rachaRoutes);
-app.use('/api', recompensasRoutes);
-app.use('/api', procesosRoutes);
+app.use('/api/usuarios', usuariosRoutes);
+app.use('/api/rutinas', rutinasRoutes);
+app.use('/api/ejercicios', ejerciciosRoutes);
+app.use('/api/perfil', perfilRoutes); // Ruta actualizada
+app.use('/api/comunidad', comunidadRoutes);
+app.use('/api/motivaciones', motivacionesRoutes);
+app.use('/api/notificaciones', notificacionesRoutes);
+app.use('/api/rachas', rachasRoutes);
+app.use('/api/recompensas', recompensasRoutes);
+app.use('/api/procesos', procesosRoutes);
 
 app.listen(3000, () => {
   console.log('Servidor corriendo en el puerto 3000');
 });
-
