@@ -14,7 +14,7 @@ export const getMotivaciones = async (req, res) => {
 export const getMotivacionById = async (req, res) => {
   const { id } = req.params;
   try {
-    const [motivacion] = await conmysql.query('SELECT * FROM motivaciones WHERE id = ?', [id]);
+    const [motivacion] = await conmysql.query('SELECT * FROM motivaciones WHERE usr_id = ?', [id]);
     if (motivacion.length === 0) {
       return res.status(404).json({ message: 'Motivación no encontrada' });
     }

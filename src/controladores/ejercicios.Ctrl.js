@@ -14,7 +14,7 @@ export const getEjercicios = async (req, res) => {
 export const getEjercicioById = async (req, res) => {
   const { id } = req.params;
   try {
-    const [ejercicio] = await conmysql.query('SELECT * FROM ejercicios WHERE id = ?', [id]);
+    const [ejercicio] = await conmysql.query('SELECT * FROM ejercicios WHERE usr_id = ?', [id]);
     if (ejercicio.length === 0) {
       return res.status(404).json({ message: 'Ejercicio no encontrado' });
     }

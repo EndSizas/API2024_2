@@ -14,7 +14,7 @@ export const getNotificaciones = async (req, res) => {
 export const getNotificacionById = async (req, res) => {
   const { id } = req.params;
   try {
-    const [notificacion] = await conmysql.query('SELECT * FROM notificaciones WHERE id = ?', [id]);
+    const [notificacion] = await conmysql.query('SELECT * FROM notificaciones WHERE usr_id = ?', [id]);
     if (notificacion.length === 0) {
       return res.status(404).json({ message: 'Notificación no encontrada' });
     }

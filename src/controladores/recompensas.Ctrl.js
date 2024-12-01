@@ -14,7 +14,7 @@ export const getRecompensas = async (req, res) => {
 export const getRecompensaById = async (req, res) => {
   const { id } = req.params;  // Obtener el ID de la URL
   try {
-    const [recompensas] = await conmysql.query('SELECT * FROM recompensas WHERE id = ?', [id]);
+    const [recompensas] = await conmysql.query('SELECT * FROM recompensas WHERE usr_id = ?', [id]);
     if (recompensas.length === 0) {
       return res.status(404).json({ message: 'Recompensa no encontrada' });
     }

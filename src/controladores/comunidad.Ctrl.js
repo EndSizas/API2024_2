@@ -14,7 +14,7 @@ export const getComunidad = async (req, res) => {
 export const getComunidadById = async (req, res) => {
   const { id } = req.params;
   try {
-    const [comunidad] = await conmysql.query('SELECT * FROM comunidad WHERE id = ?', [id]);
+    const [comunidad] = await conmysql.query('SELECT * FROM comunidad WHERE usr_id = ?', [id]);
     if (comunidad.length === 0) {
       return res.status(404).json({ message: 'Comunidad no encontrada' });
     }

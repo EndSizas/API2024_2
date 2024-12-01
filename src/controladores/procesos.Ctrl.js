@@ -14,7 +14,7 @@ export const getProcesos = async (req, res) => {
 export const getProcesoById = async (req, res) => {
   const { id } = req.params;  // Obtener el ID de la URL
   try {
-    const [procesos] = await conmysql.query('SELECT * FROM procesos WHERE id = ?', [id]);
+    const [procesos] = await conmysql.query('SELECT * FROM procesos WHERE usr_id = ?', [id]);
     if (procesos.length === 0) {
       return res.status(404).json({ message: 'Proceso no encontrado' });
     }

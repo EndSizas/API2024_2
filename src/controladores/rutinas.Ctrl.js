@@ -14,7 +14,7 @@ export const getRutinas = async (req, res) => {
 export const getRutinaById = async (req, res) => {
   const { id } = req.params;  // Obtener el ID de la URL
   try {
-    const [rutinas] = await conmysql.query('SELECT * FROM rutinas WHERE id = ?', [id]);
+    const [rutinas] = await conmysql.query('SELECT * FROM rutinas WHERE usr_id = ?', [id]);
     if (rutinas.length === 0) {
       return res.status(404).json({ message: 'Rutina no encontrada' });
     }

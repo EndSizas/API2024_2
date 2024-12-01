@@ -14,7 +14,7 @@ export const getRachas = async (req, res) => {
 export const getRachaById = async (req, res) => {
   const { id } = req.params;  // Obtener el ID de la URL
   try {
-    const [rachas] = await conmysql.query('SELECT * FROM rachas WHERE id = ?', [id]);
+    const [rachas] = await conmysql.query('SELECT * FROM rachas WHERE usr_id = ?', [id]);
     if (rachas.length === 0) {
       return res.status(404).json({ message: 'Racha no encontrada' });
     }

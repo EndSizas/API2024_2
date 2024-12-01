@@ -14,7 +14,7 @@ export const getUsuarios = async (req, res) => {
 export const getUsuarioById = async (req, res) => {
   const { id } = req.params;  // Obtener el ID de la URL
   try {
-    const [rows] = await conmysql.query('SELECT * FROM usuarios WHERE id = ?', [id]);
+    const [rows] = await conmysql.query('SELECT * FROM usuarios WHERE usr_id = ?', [id]);
     if (rows.length === 0) {
       return res.status(404).json({ message: 'Usuario no encontrado' });
     }
